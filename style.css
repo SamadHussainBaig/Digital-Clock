@@ -1,0 +1,70 @@
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #1a1a2e, #16213e);
+      background-size: 1000% 1000%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Clock Container */
+    .clock {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(15px);
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .clock:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(0, 255, 240, 0.7);
+    }
+
+    /* Time Styling */
+    .time {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: bold;
+      color: #00fff0;
+      text-shadow: 0 0 10px #00fff0, 0 0 30px #00fff0, 0 0 50px #00fff0;
+      letter-spacing: 3px;
+      transition: text-shadow 0.4s ease;
+    }
+
+    .clock:hover .time {
+      text-shadow: 0 0 20px #00fff0, 0 0 50px #00fff0, 0 0 90px #00fff0;
+    }
+
+    /* Date Styling */
+    .date {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: #fff;
+      margin-top: 10px;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+
+    .clock:hover .date {
+      opacity: 1;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+      .clock {
+        padding: 20px 25px;
+        border-radius: 15px;
+      }
+    }
