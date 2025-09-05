@@ -10,7 +10,7 @@ let minutes =  cDate.getMinutes();
 let sec = cDate.getSeconds();
 hours = hours %12 ; 
 hours = (hours === 0) ? 12 : hours ;
-let AmPm = hours >= 12 ? "PM" : "AM" ;
+let AmPm = hours >= 12 ? "AM" : "PM" ;
 
 hours = String(hours).padStart(2,"0");
 minutes = String(minutes).padStart(2,"0");
@@ -22,7 +22,7 @@ sec = String(sec).padStart(2,"0");
 //     AmPm = "AM"
 // }
 
-time.textContent=`${hours}:${minutes}:${sec}:${AmPm}`;
+time.textContent=`${hours}:${minutes}:${sec} :${AmPm}`;
 
 let day = cDate.getDay();
 let month = cDate.getMonth();
